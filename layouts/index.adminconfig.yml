@@ -8,62 +8,44 @@ media_folder: "static/images/uploads" # Folder gambar global (fallback)
 public_folder: "/images/uploads"
 
 collections:
-  # ===========================================================
-  # 1. KOLEKSI KATEGORI (Batik, Bangunan, Food)
-  # ===========================================================
   - name: "categories"
     label: "Manajemen Kategori"
     folder: "content/products"
+    icon: category
     create: true
+    nested:
+      depth: 0
 
-    # filter:
-    #   field: "file"
-    #   value: "_index.md"
-
-    # Path: Membuat folder baru sesuai slug, lalu isi _index.md
-    path: "{{slug}}/_index"
-
-    # nested:
-    #   depth: 2
+    path: '{{ partial "sur" "slug" }}/_index'
 
     extension: "md"
     format: "frontmatter"
 
     fields:
       - { label: "Nama Kategori", name: "title", widget: "string" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
       - { label: "Deskripsi", name: "description", widget: "text" }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "list" }
+      - { name: "layout", widget: "hidden", default: "list" }
       - { label: "Body", name: "body", widget: "markdown", required: false }
 
-  # ===========================================================
-  # 2. KOLEKSI PRODUK (Leaf Bundle Otomatis)
-  # ===========================================================
-  - name: "products"
-    label: "Katalog Produk"
-    folder: "content/products"
+  {{- $cat := site.GetPage "section" "categories" }}
+  #{{- range $cat.Pages }}
+  - name: "products-{{.File.ContentBaseName}}"
+    label: "Katalog {{.Title}}"
+    folder: "content/products/{{.File.ContentBaseName}}"
     create: true
+    icon: inventory_2
 
-    path: "{{category}}/{{slug}}/index"
-    media_folder: "images/"
+    path: '{{ partial "sur" "slug" }}/index'
 
-    # 3. Setup Public Folder (Output URL di Frontmatter)
-    # Kosongkan ("") artinya: "Panggil gambar langsung nama filenya aja"
-    # Contoh di markdown nanti jadi: image: "foto-sepatu.jpg" (Bukan /static/images/...)
-    public_folder: ""
+    public_folder: "images"
+    thumbnail: images.*.image
 
     fields:
-      # A. PILIH KATEGORI (Relation Widget)
-      # Ini akan melist semua kategori yang sudah dibuat di koleksi atas.
-      # User tinggal pilih, gak perlu ngetik manual path-nya.
-      - label: "Pilih Kategori"
-        name: "category"
-        widget: "relation"
-        collection: "categories"
-        search_fields: ["title"]
-        value_field: "{{slug}}"
-        display_fields: ["title"]
+      - name: "category"
+        widget: "hidden"
+        default: {{ .File.ContentBaseName }}
 
-      # B. INFO DASAR
       - { label: "Nama Produk", name: "title", widget: "string" }
 
       - label: "Tanggal"
@@ -80,6 +62,7 @@ collections:
       - label: "Info Produk"
         name: "info"
         widget: "object"
+        preview: false
         fields:
           - { label: "Harga (Angka)", name: "price", widget: "number" }
           - {
@@ -89,14 +72,14 @@ collections:
               default: false,
             }
 
-      # D. GAMBAR (List)
+      # D. GAMBAR (List & Featured)
       - label: "Galeri Foto"
         name: "images"
         widget: "list"
         required: false
         fields:
-          - { label: "Image", name: "image", widget: "image" }
-          - { label: "alt", name: "alt", widget }
+          - { label: "Image", name: "image", widget: "image", media_folder: images }
+          - { label: "alt", name: "alt", widget: string }
 
       # E. OPSI BELI (Object + List)
       - label: "Tombol Pembelian"
@@ -112,6 +95,7 @@ collections:
           - label: "Marketplace Lain"
             name: "marketplaces"
             widget: "list"
+            required: false
             fields:
               - {
                   label: "Penyedia Toko",
@@ -123,3 +107,4 @@ collections:
 
       # F. DESKRIPSI UTAMA
       - { label: "Deskripsi Lengkap", name: "body", widget: "markdown" }
+  #{{- end }}

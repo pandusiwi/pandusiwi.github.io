@@ -4,6 +4,29 @@
         <meta charset="utf-8" />
         <meta name="robots" content="noindex" />
         <title>Sveltia CMS</title>
+        <style>
+            [data-key-path="images"] .item-list {
+                display: grid;
+                grid-template-columns: 1fr;
+                margin-top: 1rem;
+                gap: 1.2rem;
+            }
+
+            @media (min-width: 768px) {
+                [data-key-path="images"] .item-list {
+                    grid-template-columns: 1fr 1fr;
+                }
+                [data-key-path="images"] .item-list .item button[aria-label="Move Up"],
+                [data-key-path="images"] .item-list .item button[aria-label="Move Down"] {
+                    transform: rotate(-90deg);
+                }
+            }
+
+            [data-key-path="images"] .item-list .item {
+                width: 100%;
+                margin: 0;
+            }
+        </style>
     </head>
     <body>
         <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
