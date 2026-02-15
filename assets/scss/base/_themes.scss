@@ -2,27 +2,23 @@
 
 :root {
   --bg-body: #{v.$gray-50};
+  --bg-body-alt: #{v.$white};
   --bg-card: #{v.$white};
   
-  // Background Dropdown/Hover (Logika RGBA kamu tadi)
-  --bg-surface-hover: rgba(0, 0, 0, 0.05); // Abu tipis transparan
-  --bg-dropdown: #{v.$white}; // Dropdown biasanya solid biar text jelas
+  --bg-surface-hover: rgba(0, 0, 0, 0.06);
+  --bg-dropdown: #{v.$white};
   --border-dropdown: #{v.$gray-200};
 
-  // Text
   --text-main: #{v.$gray-900};
   --text-muted: #{v.$gray-500};
-  --text-inverse: #{v.$white}; // Teks di atas warna primary
+  --text-inverse: #{v.$white};
   
-  // Border
   --border-color: #{v.$gray-200};
   
-  // Brand
   --color-brand: #{v.$primary};
   --color-brand-light: #{v.$primary-light};
   --color-brand-dark: #{v.$primary-dark};
 
-  // Shadow (Penting untuk Dropdown!)
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
@@ -31,6 +27,7 @@
 // --- DARK MODE ---
 [data-theme="dark"] {
   --bg-body: #{v.$black}; 
+  --bg-body-alt: #{mix(white, v.$black, 2%)};
   
   --bg-card: #{mix(white, v.$black, 5%)}; 
 

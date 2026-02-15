@@ -6,6 +6,11 @@
     margin: 0;
 }
 
+html {
+    scroll-padding-top: 70px;
+    scroll-behavior: smooth;
+}
+
 html:focus-within {
     scroll-behavior: smooth;
 }

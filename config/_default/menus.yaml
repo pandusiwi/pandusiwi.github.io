@@ -12,10 +12,15 @@ main:
   pageRef: /products/batik
   weight: 2
 
-- name: Bangunan
+- name: Kuliner
   parent: Products
-  pageRef: /products/bangunan
+  pageRef: /products/kuliner
   weight: 3
+
+- name: Konstruksi
+  parent: Products
+  pageRef: /products/konstruksi
+  weight: 4
 
 - name: Kontak
   pageRef: /contact

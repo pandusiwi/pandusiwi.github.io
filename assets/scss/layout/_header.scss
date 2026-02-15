@@ -24,6 +24,9 @@ header {
         .logo,.dark-toggle {
           color: #fafafa;
         }
+        .logo-img {
+          filter: invert(1);
+        }
         .nav__link {
           color: #fafafa;
           border: none; // Hapus border link kalau ada
@@ -71,7 +74,18 @@ header {
     color: var(--text-main);
     text-decoration: none;
     z-index: 1002;
+    overflow: hidden;
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
     transition: all 0.2s ease-in-out;
+
+    &-img {
+      width: 9rem;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
 
     // Desktop Override (Hanya warna)
     @include mq(lg) {
@@ -87,7 +101,7 @@ header {
     z-index: 1002;
 
     @include mq(lg) {
-      display: none;
+      order: 9;
     }
   }
 

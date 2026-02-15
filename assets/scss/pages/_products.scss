@@ -1,0 +1,88 @@
+@use "../abstract" as *;
+
+.list-products {
+  background-color: var(--bg-body);
+  padding: 2rem 0 4rem 0;
+
+  &_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__labels {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-family: $font-brand;
+    font-size: 2rem;
+    color: var(--text-main);
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+    text-align: center;
+
+    @include mq(lg) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__description {
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+
+    @include mq(lg) {
+      max-width: 625px;
+    }
+  }
+
+  &__cards-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-evenly;
+    gap: 1rem;
+
+    .card {
+      min-width: 50%;
+
+      // &-image {
+      //   height: 8rem;
+      // }
+      //
+      // &-title {
+      //   margin-bottom: 2px;
+      //   font-size: 1.5rem;
+      // }
+      //
+      // &-price {
+      //   font-size: .75rem;
+      // }
+      //
+      // &-anchor {
+      //   width: 100%;
+      // }
+
+      // &-footer {
+      //   span {
+      //     font-size: .75rem;
+      //   }
+      // }
+
+      @include mq(md) {
+        max-width: 19rem;
+
+        &-anchor {
+          width: auto;
+        }
+      }
+    }
+
+    @include mq(lg) {
+      display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    }
+  }
+}

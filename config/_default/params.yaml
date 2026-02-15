@@ -1,3 +1,6 @@
+logo: images/pandusiwi-logo.png
+address: Jl. Lorem ipsum doloro sit ametis 
+
 home: 
   hero:
     title: Ragam Kebutuhan, </br> Satu Kualitas Terpecaya.
@@ -10,12 +13,12 @@ home:
       - images/batik.jpg
 
   about:
-    subtitle: pandasiwi
+    subtitle: pandusiwi
     description: |
-      Nama **'Pandasiwi'** diambil dengan semangat pengabdian dan pelestarian. 
+      Nama **'Pandusiwi'** diambil dengan semangat pengabdian dan pelestarian. 
       Filosofi inilah yang menjadi landasan utama kami dalam menjalankan bisnis.
       
-      Pandasiwi hadir sebagai entitas bisnis multidimensi yang berfokus pada 
+      Pandusiwi hadir sebagai entitas bisnis multidimensi yang berfokus pada 
       pemenuhan kebutuhan esensial manusia—mulai dari pelestarian budaya Batik, kebutuhan pangan praktis, hingga material bangunan berkualitas tinggi.
     image: https://cdn.vectorstock.com/i/500p/23/28/golden-floral-batik-pattern-vector-47472328.jpg
     buttonLabel: Baca Selengkap nya

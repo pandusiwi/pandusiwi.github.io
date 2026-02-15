@@ -1,5 +1,22 @@
-footer {
+.footer {
   .container {
     padding-block: 2rem !important;
+  }
+
+  &-identity {
+    .logo-img {
+      $v: 12rem;
+      width: $v;
+      height: calc($v/2);
+      object-fit: cover;
+      object-position: center;
+      transform: translateX(-0.75rem);
+    }
+  }
+
+  .copyright {
+    display: block;
+    width: 100%;
+    text-align: center;
   }
 }
