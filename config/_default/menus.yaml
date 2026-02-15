@@ -25,3 +25,16 @@ main:
 - name: Kontak
   pageRef: /contact
   weight: 30
+
+footer:
+- name: Beranda
+  pageRef: /
+  weight: 10
+
+- name: Products
+  pageRef: /products
+  weight: 20
+
+- name: Kontak
+  pageRef: /contact
+  weight: 30

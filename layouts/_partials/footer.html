@@ -1,12 +1,43 @@
 <div class="container">
     <div class="footer-wrapper">
         <div class="footer-identity">
-            {{ partial "components/logo" (dict "classes" "") }}
-            <p class="footer-identity__address">{{ site.Params.address | default "Jl. Alamat" }}</p>
+            {{ partial "components/logo.html" (dict "classes" "mb-3") }}
+            <p class="footer-identity__address">
+                {{ site.Params.address | default "Jl. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores tempora" | safeHTML }}
+            </p>
         </div>
-        <div class="footer-menu"></div>
-        <div class="footer-cta"></div>
-        <div class="footer-social"></div>
+
+        <div class="footer-menu">
+            <h3 class="footer-title mb-2">{{ site.Title }}</h3>
+            {{ partial "menu.html" (dict "menuID" "footer" "page" .) }}
+        </div>
+
+        <div class="footer-cta">
+            <a href="/contact" class="btn btn-primary mb-2">Contact Us</a>
+            <a href="#" class="btn btn-primary">Get started</a>
+        </div>
+
+        <div class="footer-social">
+            <div class="social-links">
+                {{ range slice "facebook" "github" "twitter" "linkedin" "figma" }}
+                    <a href="#" class="social-link" aria-label="{{ . }}">
+                        {{ if templates.Exists (printf "_partials/icons/%s.svg" .) }}
+                            {{ partial "icon.html" (dict
+                                "name" .
+                                "size" "24px"
+                                "class" ""
+                                )
+                            }}
+                        {{ else }}
+                            <span class="text-xs">{{ . }}</span>
+                        {{ end }}
+                    </a>
+                {{ end }}
+            </div>
+        </div>
     </div>
-    <p class="copyright mt-3">&copy;Copyright {{ now.Year }}. All rights reserved.</p>
+
+    <div class="footer-bottom text-center mt-5">
+        <p class="copyright text-muted">&copy; {{ now.Year }} All Rights Reserved</p>
+    </div>
 </div>
