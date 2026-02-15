@@ -1,0 +1,18 @@
+<section class="hero">
+    <div class="container">
+        <div class="images-slider">
+            {{ with .Resources.Get .Params.thumbnail }}
+                <img src="{{ .RelPermalink }}" alt="hero-image" />
+            {{ end }}
+        </div>
+        <div class="content">
+            <span class="content__subtitle">Selamat Datang</span>
+            <h1 class="content__title">{{ .Params.tagline | default .Title | safeHTML }}</h1>
+            <p class="content__description">{{ .Params.description }}</p>
+            <a href="{{ .Params.ctaLink | default "#list-products" }}" class="content__cta">
+                {{ .Params.ctaLabel | default "Pesan Sekarang" }}
+                {{ partial "icon" (dict "name" "arrow-right" "size" "19px") }}
+            </a>
+        </div>
+    </div>
+</section>

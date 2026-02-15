@@ -1,0 +1,10 @@
+{{- $classes := "" -}}
+{{- if (reflect.IsMap .) -}}
+    {{ $classes = .classes | default "" -}}
+{{- end -}}
+
+{{- with resources.Get site.Params.logo -}}
+    <img src="{{ .RelPermalink -}}" alt="" class="logo-img {{ $classes | default "" -}}">
+{{- else -}}
+    {{ site.Title -}}
+{{- end -}}

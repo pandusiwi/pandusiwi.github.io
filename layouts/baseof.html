@@ -11,17 +11,13 @@
         <main>
             {{ block "main" . }}{{ end }}
         </main>
-        <footer>
+        <footer class="footer">
             {{ partial "footer.html" . }}
         </footer>
 
-        <div class="btn ranger" id="important">
-
-        </div>
-
         {{ if hugo.IsDevelopment }}
             <div class="flying-kind">
-                <h3>{{ .Kind }}</h3>
+                <h3>{{ .Kind }}</h3>|<h3>{{ .Type }}</h3>
             </div>
         {{ end }}
     </body>

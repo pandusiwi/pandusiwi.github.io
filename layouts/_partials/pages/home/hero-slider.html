@@ -1,0 +1,22 @@
+{{- $data := site.Params.home.hero -}}
+
+<section class="hero">
+    <div class="container">
+        <div class="images-slider">
+            {{ range $data.images }}
+                {{ with resources.Get . }}
+                    <img src="{{ .RelPermalink }}" alt="hero-image" />
+                {{ end }}
+            {{ end }}
+        </div>
+        <div class="content">
+            <span class="content__subtitle">Selamat Datang</span>
+            <h1 class="content__title">{{ $data.title | safeHTML }}</h1>
+            <p class="content__description">{{ $data.description }}</p>
+            <a href="{{ $data.ctaLink | default "/products" | relLangURL }}" class="content__cta">
+                {{ $data.ctaLabel }}
+                {{ partial "icon" (dict "name" "arrow-right" "size" "19px") }}
+            </a>
+        </div>
+    </div>
+</section>

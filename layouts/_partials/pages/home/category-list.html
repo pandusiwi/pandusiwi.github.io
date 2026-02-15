@@ -1,0 +1,36 @@
+{{- $data := site.Params.home.categories -}}
+
+<section class="categories">
+    <div class="container">
+        <div class="categories_wrapper">
+            <div class="categories__labels">
+                <h2 class="categories__title">
+                    {{ $data.title | default "Kategori Kami" | upper }}
+                </h2>
+                <p class="categories__description">
+                    {{ $data.description | default "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum exercitationem facilis quaerat." }}
+                </p>
+            </div>
+            <div class="categories__cards-wrapper">
+                {{ with .Site.GetPage "section" "products" }}
+                    {{ range .Sections }}
+                        <a href="{{ .RelPermalink }}" class="card-anchor">
+                            <div class="card">
+                                <div class="card-image">
+                                    {{ with .Resources.Get .Params.thumbnail }}
+                                        <img src="{{ .RelPermalink }}" alt="" />
+                                    {{ end }}
+                                    <div class="overflow"></div>
+                                    <h2 class="card-image__title">{{ .Title }}</h2>
+                                </div>
+                                {{/*<div class="card-content">*/}}
+                                {{/*    <p class="card-description">{{ .Params.description }}</p>*/}}
+                                {{/*</div>*/}}
+                            </div>
+                        </a>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>

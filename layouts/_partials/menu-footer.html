@@ -1,0 +1,74 @@
+{{- /*
+    Renders a menu for the given menu ID.
+
+    @context {page} page The current page.
+    @context {string} menuID The menu ID.
+
+    @example: {{ partial "menu.html" (dict "menuID" "main" "page" .)
+}}
+*/}}
+{{- $page := .page }}
+{{- $menuID := .menuID }}
+
+{{- with index site.Menus $menuID }}
+    <nav class="nav">
+        <ul class="nav__list">
+            {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+        </ul>
+    </nav>
+{{- end }}
+
+{{- define "partials/inline/menu/walk.html" }}
+    {{- $page := .page }}
+    {{- range .menuEntries }}
+
+        {{- $isActive := $page.IsMenuCurrent .Menu . }}
+        {{- $isAncestor := $page.HasMenuCurrent .Menu . }}
+
+        {{- $name := .Name }}
+        {{- with .Identifier }}
+            {{- with T . }}
+                {{- $name = . }}
+            {{- end }}
+        {{- end }}
+
+        {{- $linkClass := "nav__link" }}
+        {{- if $isActive }}
+            {{- $linkClass = printf "%s %s" $linkClass "nav__link--active" }}
+        {{- else if $isAncestor }}
+            {{- $linkClass = printf "%s %s" $linkClass "nav__link--ancestor" }}
+        {{- end }}
+
+        {{- $hasChildren := .HasChildren }}
+        {{- $itemClass := "nav__item" }}
+        {{- if $hasChildren }}
+            {{- $itemClass = printf "%s %s" $itemClass "nav__item--has-children" }}
+        {{- end }}
+
+        {{- /* --- RENDER HTML --- */ -}}
+        <li class="{{ $itemClass }}">
+            <a
+                href="{{ .URL }}"
+                class="{{ $linkClass }}"
+                {{ if $isActive }}aria-current="page"{{ end }}
+                {{ if $isAncestor }}aria-current="true"{{ end }}
+            >
+                {{ $name }}
+
+                {{- /* Icon Panah (Opsional: Bisa pakai CSS border atau FontAwesome) */ -}}
+                {{- if $hasChildren }}
+                    <span class="nav__icon-arrow"></span>
+                    {{/* Atau kalau mau pakai FontAwesome kayak kodemu: */}}
+                    {{/* <i class="fas fa-angle-down"></i> */}}
+                {{- end }}
+            </a>
+
+            {{- /* RENDER ANAK (Recursive) */ -}}
+            {{- if $hasChildren }}
+                <ul class="nav__dropdown">
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .Children) }}
+                </ul>
+            {{- end }}
+        </li>
+    {{- end }}
+{{- end }}

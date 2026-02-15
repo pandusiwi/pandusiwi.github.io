@@ -1,0 +1,7 @@
+{{- $name := .name -}} 
+{{- $size := .size | default "24" -}}
+{{- $class := .class | default "" -}}
+<span class="icon {{ $class }}" 
+    style="width: {{ $size }}; height: {{ $size }}; display: inline-block;">
+    {{- partial (printf "icons/%s.svg" $name) . -}}
+</span>

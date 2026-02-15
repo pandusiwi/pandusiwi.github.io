@@ -3,7 +3,18 @@
     "targetPath" "css/style.css"
     "transpiler" "dartsass"
 }}
+{{/*Main Style*/}}
 {{- with resources.Get "scss/main.scss" | toCSS $opts }}
+    {{- if hugo.IsDevelopment }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" />
+    {{- else }}
+        {{- with . | minify | fingerprint }}
+            <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
+        {{- end }}
+    {{- end }}
+{{- end }}
+
+{{- with resources.Get "css/vendor-utilities.css" -}}
     {{- if hugo.IsDevelopment }}
         <link rel="stylesheet" href="{{ .RelPermalink }}" />
     {{- else }}

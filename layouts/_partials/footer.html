@@ -1,1 +1,12 @@
-<p>Copyright {{ now.Year }}. All rights reserved.</p>
+<div class="container">
+    <div class="footer-wrapper">
+        <div class="footer-identity">
+            {{ partial "components/logo" (dict "classes" "") }}
+            <p class="footer-identity__address">{{ site.Params.address | default "Jl. Alamat" }}</p>
+        </div>
+        <div class="footer-menu"></div>
+        <div class="footer-cta"></div>
+        <div class="footer-social"></div>
+    </div>
+    <p class="copyright mt-3">&copy;Copyright {{ now.Year }}. All rights reserved.</p>
+</div>

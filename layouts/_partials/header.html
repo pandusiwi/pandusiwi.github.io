@@ -1,5 +1,7 @@
 <div class="container nav-container">
-    <a class="logo" href="{{ site.BaseURL }}">{{ site.Title }}</a>
+    <a class="logo" href="{{ site.BaseURL }}">
+        {{ partial "components/logo" . }}
+    </a>
     <div class="button-wrapper">
         <button class="dark-toggle">
             {{ partial "icon" (dict "name" "moon-solid" "size" "100%") }}
@@ -11,7 +13,4 @@
         </button>
     </div>
     {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-    <button class="dark-toggle">
-        {{ partial "icon" (dict "name" "moon-solid" "size" "100%") }}
-    </button>
 </div>

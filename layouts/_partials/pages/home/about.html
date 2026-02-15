@@ -1,0 +1,39 @@
+{{- $data := site.Params.home.about -}}
+
+<section class="home-about" id="about">
+    <div class="container">
+        <div class="home-about__wrapper">
+            <div class="home-about__visual">
+                {{ with resources.Get $data.image }}
+                    {{ $img := .Resize "600x webp" }}
+                    <img src="{{ $img.RelPermalink }}" alt="Filosofi uandusiwi" class="home-about__img" loading="lazy" width="{{ $img.Width }}" height="{{ $img.Height }}" />
+                {{ else }}
+                    <img src="{{ $data.image | default "/images/batik.jpg" }}" alt="Filosofi Pandusiwi" class="home-about__img" loading="lazy" />
+                {{ end }}
+
+
+                <div class="home-about__decoration"></div>
+            </div>
+
+            <div class="home-about__content">
+                {{ with $data.subtitle }}
+                    <span class="home-about__subtitle">{{ . }}</span>
+                {{ end }}
+
+
+                <h2 class="home-about__title">{{ $data.title | default "Filosofi Kami" }}</h2>
+
+                <div class="home-about__text">
+                    {{ $data.description | markdownify }}
+                </div>
+
+                {{ if $data.buttonLabel }}
+                    <a href="{{ $data.buttonLink | default "/about" | relLangURL }}" class="btn home-about__btn-outline">
+                        {{ $data.buttonLabel }}
+                        {{ partial "icon" (dict "name" "arrow-right" "size" "18px") }}
+                    </a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>

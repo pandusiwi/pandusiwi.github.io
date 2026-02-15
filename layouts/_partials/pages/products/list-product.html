@@ -1,0 +1,34 @@
+<section class="list-products" id="list-products">
+    <div class="container">
+        <div class="list-products_wrapper">
+            <div class="list-products__labels">
+                <h2 class="list-products__title">
+                    {{ .Params.titleListProducts | default "Katalog" }}
+                </h2>
+                <p class="list-products__description">
+                    {{ .Params.descriptionListProduct | default .Params.tagline | lower | strings.FirstUpper }}
+                </p>
+            </div>
+            <div class="list-products__cards-wrapper">
+                {{ range .Pages }}
+                    <a href="{{ .RelPermalink }}" class="card-anchor">
+                        <div class="card">
+                            <div class="card-image">
+                                {{ with .Resources.Get (index .Params.images 0).image }}
+                                    <img src="{{ .RelPermalink }}" alt="" />
+                                {{ end }}
+                            </div>
+                            <div class="card-content">
+                                <h2 class="card-title">{{ .Title }}</h2>
+                                <p class="card-price">Rp. {{ .Params.info.price |  lang.FormatNumberCustom 0 }}</p>
+                            </div>
+                            <div class="card-footer p-0">
+                                <span href="{{ .RelPermalink }}" class="card-cta-full">Pesan Sekarang</span>
+                            </div>
+                        </div>
+                    </a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
