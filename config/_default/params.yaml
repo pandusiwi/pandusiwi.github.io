@@ -15,11 +15,9 @@ home:
   about:
     subtitle: pandusiwi
     description: |
-      Nama **'Pandusiwi'** diambil dengan semangat pengabdian dan pelestarian. 
-      Filosofi inilah yang menjadi landasan utama kami dalam menjalankan bisnis.
-      
-      Pandusiwi hadir sebagai entitas bisnis multidimensi yang berfokus pada 
-      pemenuhan kebutuhan esensial manusia—mulai dari pelestarian budaya Batik, kebutuhan pangan praktis, hingga material bangunan berkualitas tinggi.
+      Nama **'Pandusiwi'** lahir dari semangat untuk mengabdi (Siwi) dan memandu (Pandu). Kami percaya bahwa bisnis bukan sekadar transaksi, melainkan amanah untuk memberikan yang terbaik.
+
+      Hadir sebagai entitas multidimensi, Pandusiwi menyelaraskan keindahan budaya melalui Batik, kepraktisan pangan, hingga kekokohan material bangunan. Tiga pilar berbeda, satu standar yang sama: Integritas tanpa kompromi.
     image: https://cdn.vectorstock.com/i/500p/23/28/golden-floral-batik-pattern-vector-47472328.jpg
     buttonLabel: Baca Selengkap nya
     buttonLink: /about
@@ -28,3 +26,25 @@ home:
     title: Kategori Kami
     description: |
       Temukan beragam kebutuhan yang telah kami sediakan.
+
+testimonies:
+  main:
+    - name: Ratna Wijaya
+      role: Dosen & Peneliti Budaya
+      star: 5
+      imgID: 32
+      testimony: |
+        Motif batiknya otentik dan kainnya sangat halus. Nyaman dipakai seharian bekerja tanpa rasa gerah. Penampilan saya jadi lebih elegan dan berwibawa. Sangat merepresentasikan warisan budaya yang berkualitas tinggi.
+    - name: Hendra Gunawan
+      role: Kontraktor Properti
+      star: 3
+      imgID: 68
+      testimony: |
+        Sebagai kontraktor, ketepatan waktu adalah kunci. Pandusiwi selalu mengirimkan material bangunan berkualitas premium tepat jadwal. Proyek renovasi saya berjalan lancar tanpa hambatan logistik. Partner terpercaya untuk konstruksi kokoh.
+    - name: Sarah Amelia
+      role: The Master Chef
+      star: 5
+      imgID: 0
+      testimony: |
+        Masakan kateringnya sungguh lezat dengan bumbu yang meresap sempurna. Porsinya pas dan kemasannya sangat higienis. Solusi paling praktis untuk acara kantor, semua tamu memuji rasanya. Pasti akan pesan lagi!
+      

@@ -1,10 +1,10 @@
-@use "../abstract/variables" as v;
+@use '../abstract' as *;
 
 body {
-  font-family: #{v.$font-body};
+  font-family: #{$font-body};
   font-style: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: #{v.$font-brand};
+  font-family: #{$font-brand};
 }

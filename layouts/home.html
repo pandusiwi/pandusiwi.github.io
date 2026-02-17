@@ -4,4 +4,6 @@
     {{ partial "pages/home/about" . }}
 
     {{ partial "pages/home/category-list" . }}
+
+    {{ partial "pages/home/testimonial" (dict "testimonies" site.Params.testimonies.main) }}
 {{ end }}

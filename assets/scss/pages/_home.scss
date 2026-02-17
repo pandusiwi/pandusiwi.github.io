@@ -23,43 +23,49 @@ main {
 
   &__wrapper {
     display: grid;
-    grid-template-columns: 1fr; // Mobile: 1 Kolom (Tumpuk)
+    grid-template-columns: 1fr;
     gap: 2rem;
-    align-items: center; // Vertikal Center (Penting!)
+    align-items: center;
 
-    // Desktop: 2 Kolom (Kiri Gambar 40%, Kanan Teks 60% atau 50:50)
+    @include mq(md) {
+      grid-template-columns: 5fr 6fr;
+      gap: 4rem;
+    }
+
     @include mq(lg) {
       grid-template-columns: 4fr 6fr;
-      gap: 4rem; // Jarak antar kolom lebih lega
+      gap: 4rem;
     }
   }
 
-  // --- VISUAL (GAMBAR) ---
   &__visual {
     position: relative;
 
-    // Trik biar gambar responsive & rounded cantik
     .home-about__img {
       width: 100%;
       height: auto;
-      border-radius: 16px; // Sudut melengkung sesuai desain kamu
+      border-radius: 16px;
       object-fit: cover;
-      aspect-ratio: 1 / 1; // Paksa kotak (Square) kayak di gambar
+      aspect-ratio: 1 / 1;
       z-index: 2;
       position: relative;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); // Bayangan halus
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 
-    // Dekorasi kotak di belakang (Opsional biar artistik)
     .home-about__decoration {
       position: absolute;
-      bottom: -15px;
-      right: -15px;
+      bottom: -5px;
+      right: -5px;
       width: 100%;
       height: 100%;
-      background-color: var(--color-brand-light, #f0f0f0); // Warna aksen
+      background-color: var(--color-brand-light, #f0f0f0);
       border-radius: 16px;
-      z-index: 1; // Di belakang gambar
+      z-index: 1;
+
+      @include mq(md) {
+        bottom: -15px;
+        right: -15px;
+      }
     }
   }
 
@@ -72,7 +78,6 @@ main {
     }
   }
 
-  // --- TYPOGRAPHY ---
   &__subtitle {
     display: block;
     color: var(--color-brand);
@@ -97,7 +102,7 @@ main {
 
   &__text {
     font-size: 1rem;
-    line-height: 1.7; // Jarak antar baris lega biar enak dibaca
+    line-height: 1.7;
     color: var(--text-muted, #555);
     margin-bottom: 2rem;
     text-align: justify;

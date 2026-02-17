@@ -46,6 +46,10 @@
   // Shadow di dark mode biasanya lebih tebal atau malah hilang
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.5);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.5);
+
+  .logo-img { // TODO: Make better than this approach
+    filter: invert(1);
+  }
 }
 
 body {

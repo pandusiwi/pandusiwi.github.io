@@ -4,7 +4,8 @@
     "trailingComma": "es5",
     "printWidth": 800,
     "tabWidth": 4,
-    "plugins": ["prettier-plugin-go-template"],
+    "plugins": ["prettier-plugin-go-template", "prettier-plugin-css-order"],
+    "cssDeclarationSorterOrder": "concentric-css",
     "htmlWhitespaceSensitivity": "ignore",
     "overrides": [
         {
