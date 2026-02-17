@@ -2,7 +2,7 @@
 
 :root {
   --bg-body: #{v.$gray-50};
-  --bg-body-alt: #{v.$white};
+  --bg-body-alt: #{darken(v.$white, 2%)};
   --bg-card: #{v.$white};
   
   --bg-surface-hover: rgba(0, 0, 0, 0.06);

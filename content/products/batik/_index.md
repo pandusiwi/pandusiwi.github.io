@@ -6,3 +6,9 @@ description: Hadir memenuhi kebutuhan gaya hidup melalui Batik berkualitas, Kuli
 weight: 1
 kind: home
 ---
+
+- Kain Batik
+- Atasan Batik Pria
+- Atasan Batik Wanita
+- Bahawan Batik Pria
+- Bawahan Batik Wanita

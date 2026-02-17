@@ -6,3 +6,8 @@ description: Hadir memenuhi kebutuhan gaya hidup melalui Batik berkualitas, Kuli
 weight: 10
 layout: list
 ---
+
+- Olahan Daging
+- Olahan Ikan & Seafood
+- Camilan & Lauk Ringan
+- Siap Saji & Lainnya

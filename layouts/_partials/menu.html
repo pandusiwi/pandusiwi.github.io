@@ -45,7 +45,6 @@
             {{- $itemClass = printf "%s %s" $itemClass "nav__item--has-children" }}
         {{- end }}
 
-        {{- /* --- RENDER HTML --- */ -}}
         <li class="{{ $itemClass }}">
             <a
                 href="{{ .URL }}"
@@ -55,15 +54,11 @@
             >
                 {{ $name }}
 
-                {{- /* Icon Panah (Opsional: Bisa pakai CSS border atau FontAwesome) */ -}}
                 {{- if $hasChildren }}
                     <span class="nav__icon-arrow"></span>
-                    {{/* Atau kalau mau pakai FontAwesome kayak kodemu: */}}
-                    {{/* <i class="fas fa-angle-down"></i> */}}
                 {{- end }}
             </a>
 
-            {{- /* RENDER ANAK (Recursive) */ -}}
             {{- if $hasChildren }}
                 <ul class="nav__dropdown">
                     {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .Children) }}
