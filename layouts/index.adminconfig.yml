@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
 backend:
   name: github
-  repo: pandusiwi/demo
+  repo: pandusiwi/pandusiwi.github.io
   base_url: https://pandasiwi-authenticator.muhammadrozaan.workers.dev
 
 media_folder: "static/images/uploads" # Folder gambar global (fallback)
