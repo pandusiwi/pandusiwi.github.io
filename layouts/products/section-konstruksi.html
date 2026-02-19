@@ -3,4 +3,6 @@
     {{ partial "pages/products/hero" . }}
 
     {{ partial "pages/konstruksi/list-konstruksi" . }}
+
+    {{ partial "pages/konstruksi/testimonial" (dict "testimonies" site.Params.testimonies.main ) }}
 {{ end }}

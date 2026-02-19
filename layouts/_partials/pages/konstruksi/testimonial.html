@@ -1,0 +1,42 @@
+{{ $testimonies := .testimonies }}
+
+<section class="testimonial">
+    <div class="container">
+        <div class="testimonial__labels">
+            <h2 class="testimonial__title">Testimoni</h2>
+            <p class="testimonial__description">{{ "\"Kepercayaan Anda adalah Prioritas Kami. Simak pengalaman para klien yang telah bermitra dengan Pandusiwi Store.\"" | markdownify }}</p>
+        </div>
+        <div class="testimonial__wrapper">
+            {{ range $testimonies }}
+                <div class="testimonial__card">
+                    <div class="testimonial__card-header">
+                        <div class="testimonial__card-stars">
+                            {{ range 5 }}
+                                {{ partial "icon" (dict "name" "star" "size" "19px") }}
+                            {{ end }}
+                        </div>
+                        <div class="testimonial__badge">
+                            {{ partial "icon" (dict "name" "thumb-up" "size" "19px") }}
+                            <span>testimonial</span>
+                        </div>
+                    </div>
+                    <div class="testimonial__body">
+                        {{ .testimony }}
+                    </div>
+                    <div class="testimonial__footer">
+                        <div class="testimonial__user-wrapper">
+                            <div class="testimonial__user-profile">
+                                <img src="https://i.pravatar.cc/100?img={{ .imgID }}" alt="avatars">
+                            </div>
+                            <div class="testimonial__user-name-wrapper">
+                                <h3 class="testimonial__user-title">{{ .name }}</h3>
+                                <p class="testimonial__user-subtitle">{{ .role }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+

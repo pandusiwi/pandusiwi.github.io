@@ -1,8 +1,24 @@
-<section class="list-konstruksi konstruksi">
+<section class="list-konstruksi konstruksi" id="list-konstruksi">
     <div class="container">
         <div class="konstruksi__labels">
-            <h2 class="konstruksi__title">Testimoni</h2>
-            <p class="konstruksi__description">{{ "\"Kepercayaan Anda adalah Prioritas Kami. Simak pengalaman para klien yang telah bermitra dengan Pandusiwi Store.\"" | markdownify }}</p>
+            <h2 class="konstruksi__title">Katalog</h2>
+            <p class="konstruksi__description">{{ "\"Temukan kemewahan budaya dalam koleksi Batik kami, nikmati kepraktisan rasa dalam pilihan Frozen Food kami, dan wujudkan hunian impian bersama layanan Kontraktor kami.\"" | markdownify }}</p>
+        </div>
+        <div class="konstruksi__katalog-wrapper">
+            {{ range .Pages }}
+                <a href="#list-konstruksi" class="card-anchor card-katalog">
+                    <div class="card">
+                        <div class="card-image">
+                            {{ with .Resources.Get (index .Params.images 0).image }}
+                                <img src="{{ .RelPermalink }}" alt="" />
+                            {{ end }}
+                            <div class="overflow"></div>
+                            <h2 class="card-image__title">{{ .Title }}</h2>
+                            <h2 class="card-arrow"></h2>
+                        </div>
+                    </div>
+                </a>
+            {{ end }}
         </div>
     </div>
 </section>

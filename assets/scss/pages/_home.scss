@@ -176,7 +176,11 @@ main {
     .card {
       z-index: 10;
       transition: 0.3s all ease-in-out;
-      max-width: 100%;
+      min-width: 100%;
+
+      @include mq(lg) {
+        min-width: 20rem;
+      }
 
       &-anchor {
         position: relative;
@@ -215,8 +219,8 @@ main {
         }
 
         @include mq(lg) {
-          margin-top: .5rem;
           position: absolute;
+          margin-top: 0.5rem;
           border-radius: 12px;
         }
 

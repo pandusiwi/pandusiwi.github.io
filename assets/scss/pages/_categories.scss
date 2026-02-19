@@ -1,0 +1,10 @@
+@use '../abstract' as *;
+
+.categories-page {
+  .card-image {
+    @include mq(lg){
+      min-height: 445px;
+    }
+  }
+}
+
