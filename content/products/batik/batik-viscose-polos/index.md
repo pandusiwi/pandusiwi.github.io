@@ -2,7 +2,7 @@
 category: batik
 title: Batik Viscose Polos
 date: 2026-02-19T16:52:00+07:00
-draft: true
+draft: false
 info:
   price: 48000
   is_sold_out: false
