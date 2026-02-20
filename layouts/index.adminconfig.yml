@@ -16,7 +16,7 @@ collections:
     files:
       - name: "params"
         label: "Parameter Website (Params)"
-        file: "data/params.yaml"
+        file: "config/_default/params.yaml"
         fields:
           - { label: "Logo", name: "logo", widget: "image" }
           - { label: "Alamat", name: "address", widget: "string" }
