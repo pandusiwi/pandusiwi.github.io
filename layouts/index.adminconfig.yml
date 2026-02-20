@@ -8,6 +8,61 @@ media_folder: "static/images/uploads" # Folder gambar global (fallback)
 public_folder: "/images/uploads"
 
 collections:
+  - name: "settings"
+    label: "Pengaturan Situs"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "params"
+        label: "Parameter Website (Params)"
+        file: "data/params.yaml"
+        fields:
+          - { label: "Logo", name: "logo", widget: "image" }
+          - { label: "Alamat", name: "address", widget: "string" }
+          
+          # Bagian Hero
+          - label: "Halaman Depan - Hero"
+            name: "home"
+            widget: "object"
+            fields:
+              - label: "Hero Section"
+                name: "hero"
+                widget: "object"
+                fields:
+                  - { label: "Judul (Bisa HTML)", name: "title", widget: "string" }
+                  - { label: "Deskripsi", name: "description", widget: "text" }
+                  - { label: "Label Tombol CTA", name: "ctaLabel", widget: "string" }
+                  - { label: "Link Tombol CTA", name: "ctaLink", widget: "string" }
+                  - { label: "Gambar Hero", name: "images", widget: "list", field: { widget: "image" } }
+
+          # Bagian About
+          - label: "Halaman Depan - About"
+            name: "about"
+            widget: "object"
+            fields:
+                - { label: "Subtitle", name: "subtitle", widget: "string" }
+                - { label: "Deskripsi (Markdown)", name: "description", widget: "markdown" }
+                - { label: "Gambar About", name: "image", widget: "image" }
+                - { label: "Label Tombol", name: "buttonLabel", widget: "string" }
+                - { label: "Link Tombol", name: "buttonLink", widget: "string" }
+
+          # Bagian Testimonies
+          - label: "Testimoni"
+            name: "testimonies"
+            widget: "object"
+            fields:
+              - label: "Daftar Testimoni"
+                name: "main"
+                widget: "list"
+                summary: '{{fields.name}} - {{fields.role}}'
+                fields:
+                  - { label: "Nama", name: "name", widget: "string" }
+                  - { label: "Role/Jabatan", name: "role", widget: "string" }
+                  - { label: "Rating (1-5)", name: "star", widget: "number", min: 1, max: 5 }
+                  - { label: "ID Gambar (Opsional)", name: "imgID", widget: "number" }
+                  - { label: "Isi Testimoni", name: "testimony", widget: "text" }
+  
   - name: "categories"
     label: "Manajemen Kategori"
     folder: "content/products"
