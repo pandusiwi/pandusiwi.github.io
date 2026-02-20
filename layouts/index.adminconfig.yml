@@ -55,7 +55,7 @@ collections:
               - label: "Daftar Testimoni"
                 name: "main"
                 widget: "list"
-                summary: '{{fields.name}} - {{fields.role}}'
+                summary: '{{ partial "sur" "fields.name" }} - {{ partial "sur" "fields.role" }}'
                 fields:
                   - { label: "Nama", name: "name", widget: "string" }
                   - { label: "Role/Jabatan", name: "role", widget: "string" }
