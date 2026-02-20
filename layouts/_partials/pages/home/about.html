@@ -6,7 +6,7 @@
             <div class="home-about__visual">
                 {{ with resources.Get $data.image }}
                     {{ $img := .Resize "600x webp" }}
-                    <img src="{{ $img.RelPermalink }}" alt="Filosofi uandusiwi" class="home-about__img" loading="lazy" width="{{ $img.Width }}" height="{{ $img.Height }}" />
+                    <img src="{{ $img.RelPermalink }}" alt="Filosofi Pandusiwi" class="home-about__img" loading="lazy" width="{{ $img.Width }}" height="{{ $img.Height }}" />
                 {{ else }}
                     <img src="{{ $data.image | default "/images/batik.jpg" }}" alt="Filosofi Pandusiwi" class="home-about__img" loading="lazy" />
                 {{ end }}

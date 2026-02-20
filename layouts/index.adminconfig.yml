@@ -4,13 +4,12 @@ backend:
   repo: pandusiwi/pandusiwi.github.io
   base_url: https://pandasiwi-authenticator.muhammadrozaan.workers.dev
 
-media_folder: "static/images/uploads" # Folder gambar global (fallback)
-public_folder: "/images/uploads"
+media_folder: "assets/images"
+public_folder: "/images"
 
 collections:
   - name: "settings"
     label: "Pengaturan Situs"
-    delete: false
     editor:
       preview: false
     files:
@@ -29,23 +28,25 @@ collections:
               - label: "Hero Section"
                 name: "hero"
                 widget: "object"
+                collapsed: true
                 fields:
                   - { label: "Judul (Bisa HTML)", name: "title", widget: "string" }
                   - { label: "Deskripsi", name: "description", widget: "text" }
                   - { label: "Label Tombol CTA", name: "ctaLabel", widget: "string" }
                   - { label: "Link Tombol CTA", name: "ctaLink", widget: "string" }
-                  - { label: "Gambar Hero", name: "images", widget: "list", field: { widget: "image" } }
+                  - { label: "Gambar Hero", name: "images", widget: "list", field: { name: "", widget: "image" } }
 
-          # Bagian About
-          - label: "Halaman Depan - About"
-            name: "about"
-            widget: "object"
-            fields:
-                - { label: "Subtitle", name: "subtitle", widget: "string" }
-                - { label: "Deskripsi (Markdown)", name: "description", widget: "markdown" }
-                - { label: "Gambar About", name: "image", widget: "image" }
-                - { label: "Label Tombol", name: "buttonLabel", widget: "string" }
-                - { label: "Link Tombol", name: "buttonLink", widget: "string" }
+              # Bagian About
+              - label: "Halaman Depan - About"
+                name: "about"
+                widget: "object"
+                collapsed: true
+                fields:
+                    - { label: "Subtitle", name: "subtitle", widget: "string" }
+                    - { label: "Deskripsi (Markdown)", name: "description", widget: "markdown" }
+                    - { label: "Gambar About", name: "image", widget: "image" }
+                    - { label: "Label Tombol", name: "buttonLabel", widget: "string" }
+                    - { label: "Link Tombol", name: "buttonLink", widget: "string" }
 
           # Bagian Testimonies
           - label: "Testimoni"
@@ -56,6 +57,7 @@ collections:
                 name: "main"
                 widget: "list"
                 summary: '{{ partial "sur" "fields.name" }} - {{ partial "sur" "fields.role" }}'
+                collapsed: true
                 fields:
                   - { label: "Nama", name: "name", widget: "string" }
                   - { label: "Role/Jabatan", name: "role", widget: "string" }
@@ -89,7 +91,7 @@ collections:
       - { name: "layout", widget: "hidden", default: "list" }
       - { label: "Body", name: "body", widget: "markdown", required: false }
 
-  {{- $cat := site.GetPage "section" "products" }}
+  #{{- $cat := site.GetPage "section" "products" }}
   #{{- range $cat.Pages }}
   - name: "products-{{.File.ContentBaseName}}"
     label: "Katalog {{.Title}}"
