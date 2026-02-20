@@ -1,7 +1,6 @@
 ---
 category: konstruksi
 title: Renovasi Toko atau Caffe
-ooooramg: ada
 date: 2026-02-12T18:48:00+07:00
 draft: false
 info:
@@ -13,6 +12,7 @@ images:
 buy_options:
   whatsapp: true
   marketplaces: []
+ooooramg: ada
 ---
 
 lenkao
