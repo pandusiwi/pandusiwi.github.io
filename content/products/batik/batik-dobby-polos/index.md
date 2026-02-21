@@ -4,7 +4,7 @@ title: Batik Dobby Polos
 date: 2026-02-21T21:37:00+07:00
 draft: false
 info:
-  price: 51
+  price: 51000
   is_sold_out: false
 images:
   - image: images/1000051430.jpg
