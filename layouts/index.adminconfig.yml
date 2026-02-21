@@ -35,7 +35,6 @@ collections:
                   - { label: "Judul (Bisa HTML)", name: "title", widget: "string" }
                   - { label: "Deskripsi", name: "description", widget: "text" }
                   - { label: "Label Tombol CTA", name: "ctaLabel", widget: "string" }
-                  - { label: "Link Tombol CTA", name: "ctaLink", widget: "string" }
                   - { label: "Gambar Hero", name: "images", widget: "list", field: { name: "", widget: "image" } }
 
               # Bagian About
