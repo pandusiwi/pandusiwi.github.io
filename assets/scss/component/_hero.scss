@@ -2,58 +2,72 @@
 @use '../abstract/mixin' as *;
 
 .hero {
-  height: calc(100dvh - 70px);
   position: relative;
+  height: calc(100dvh - 70px);
   overflow: hidden;
 
   .images-slider {
     position: absolute;
+    z-index: 1;
     inset: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
 
     &::after {
-      content: '';
       position: absolute;
       inset: 0;
       background-color: rgba(0, 0, 0, 0.6);
+      content: '';
     }
 
     img {
+      position: absolute;
+      transform: scale(1.05); // Efek zoom-in sedikit (ken-burns effect)
+      // Animasi transisi menghilang
+      opacity: 0;
+      transition:
+        opacity 1.5s ease-in-out,
+        transform 5s ease-out;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center;
+
+      // Animasi transisi muncul saat class .active ditambahkan oleh JS
+      &.active {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
   }
 
   .content {
+    display: flex;
     position: absolute;
-    inset: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     z-index: 2;
+    inset: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     color: white;
     text-align: center;
 
     &__title {
-      font-family: #{v.$font-brand};
+      margin-bottom: 0.5rem;
+      padding: 0;
       font-size: calc(1.5rem + 2dvw);
       line-height: 1.2;
+      font-family: #{v.$font-brand};
       letter-spacing: 2pt;
-      padding: 0;
-      margin-bottom: 0.5rem;
       text-shadow: 0 0 9pt rgba(0, 0, 0, 1);
 
       @include mq(md) {
+        max-width: 64rem;
         font-size: 3.5rem;
         line-height: 0.89;
-        max-width: 64rem;
       }
 
       @include mq(lg) {
@@ -63,9 +77,9 @@
     }
 
     &__subtitle {
+      margin-bottom: 10pt;
       font-weight: 500;
       font-size: 1rem;
-      margin-bottom: 10pt;
       letter-spacing: 2pt;
       text-shadow: 0 0 9pt rgba(0, 0, 0, 1);
 
@@ -77,11 +91,11 @@
 
     &__description {
       margin-top: 10pt;
-      max-width: 90%;
-      text-shadow: 0 0 9pt rgba(0, 0, 0, 1);
-      font-size: 1rem;
-      max-width: 600px;
       padding: 0 20px;
+      max-width: 90%;
+      max-width: 600px;
+      font-size: 1rem;
+      text-shadow: 0 0 9pt rgba(0, 0, 0, 1);
 
       @include mq(md) {
         font-size: 1.2rem;
@@ -89,17 +103,17 @@
     }
 
     &__cta {
+      display: inline-flex;
       position: relative;
+      align-items: center;
       margin-top: 1.5rem;
+      box-shadow: var(--shadow-sm);
       border-radius: 10px;
-      padding: 0.75rem 2rem;
       background-color: var(--color-brand);
+      padding: 0.75rem 2rem;
       color: white;
       font-weight: 900;
       text-decoration: none;
-      box-shadow: var(--shadow-sm);
-      display: inline-flex;
-      align-items: center;
 
       &:hover {
         background-color: #{mix(black, v.$primary, 20%)};
@@ -110,8 +124,8 @@
       }
 
       @include mq(md) {
-        margin-top: 2rem;
         transform: translateY(50px);
+        margin-top: 2rem;
       }
     }
   }

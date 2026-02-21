@@ -10,6 +10,7 @@ public_folder: "/images"
 collections:
   - name: "settings"
     label: "Pengaturan Situs"
+    icon: settings
     editor:
       preview: false
     files:
