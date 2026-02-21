@@ -4,7 +4,7 @@ title: Batik Katun Tulis Dasar Putih
 date: 2026-02-21T21:43:00+07:00
 draft: false
 info:
-  price: 200
+  price: 200000
   is_sold_out: false
 images:
   - image: images/1000051432.jpg
