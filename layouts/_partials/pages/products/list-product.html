@@ -10,6 +10,7 @@
                 </p>
             </div>
             <div class="list-products__cards-wrapper">
+                {{ $cleanPhone := replaceRE "[^0-9]" "" site.Params.contact | default "" }}
                 {{ range .Pages }}
                     <a href="https://wa.me/{{ $cleanPhone }}?text=Saya ingin memesan {{ .Title }} " class="card-anchor">
                         <div class="card">
@@ -23,7 +24,6 @@
                                 <p class="card-price">Rp. {{ .Params.info.price |  lang.FormatNumberCustom 0 }}</p>
                             </div>
                             <div class="card-footer p-0">
-                                {{ $cleanPhone := replaceRE "[^0-9]" "" site.Params.contact | default "" }}
                                 <span href="" class="card-cta-full">Pesan Sekarang</span>
                             </div>
                         </div>
