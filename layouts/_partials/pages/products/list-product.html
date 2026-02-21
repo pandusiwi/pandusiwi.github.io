@@ -11,7 +11,7 @@
             </div>
             <div class="list-products__cards-wrapper">
                 {{ range .Pages }}
-                    <a href="{{ .RelPermalink }}" class="card-anchor">
+                    <a href="https://wa.me/{{ $cleanPhone }}?text=Saya ingin memesan {{ .Title }} " class="card-anchor">
                         <div class="card">
                             <div class="card-image">
                                 {{ with .Resources.Get (index .Params.images 0).image }}
@@ -24,7 +24,7 @@
                             </div>
                             <div class="card-footer p-0">
                                 {{ $cleanPhone := replaceRE "[^0-9]" "" site.Params.contact | default "" }}
-                                <span href="https://wa.me/{{ $cleanPhone }}?text=Saya ingin memesan {{ .Title }} " class="card-cta-full">Pesan Sekarang</span>
+                                <span href="" class="card-cta-full">Pesan Sekarang</span>
                             </div>
                         </div>
                     </a>
