@@ -4,7 +4,7 @@ title: Batik Sarimbit Sutra ATBM Baron
 date: 2026-02-21T21:40:00+07:00
 draft: false
 info:
-  price: 3200000
+  price: 3
   is_sold_out: false
 images:
   - image: images/1000051431.jpg
