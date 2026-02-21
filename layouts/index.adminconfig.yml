@@ -20,6 +20,7 @@ collections:
         fields:
           - { label: "Logo", name: "logo", widget: "image" }
           - { label: "Alamat", name: "address", widget: "string" }
+          - { label: "Kontak", name: "contact", widget: "string" }
           
           # Bagian Hero
           - label: "Halaman Depan - Hero"
