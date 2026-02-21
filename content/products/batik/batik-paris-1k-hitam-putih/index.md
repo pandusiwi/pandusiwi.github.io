@@ -4,7 +4,7 @@ title: Batik Paris 1K Hitam & Putih
 date: 2026-02-21T21:45:00+07:00
 draft: false
 info:
-  price: 60
+  price: 60000
   is_sold_out: false
 images:
   - image: images/1000051433.jpg
