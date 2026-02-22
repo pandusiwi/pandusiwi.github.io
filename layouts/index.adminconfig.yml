@@ -5,7 +5,7 @@ backend:
   base_url: https://pandasiwi-authenticator.muhammadrozaan.workers.dev
 
 media_folder: "assets/images"
-public_folder: "/images"
+public_folder: "images"
 
 collections:
   - name: "settings"
