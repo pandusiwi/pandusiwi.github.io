@@ -26,7 +26,11 @@
                     <div class="testimonial__footer">
                         <div class="testimonial__user-wrapper">
                             <div class="testimonial__user-profile">
-                                <img src="https://i.pravatar.cc/100?img={{ .imgID }}" alt="avatars">
+                                {{ with resources.Get .image }}
+                                    {{ with .Resize "100x100" }}
+                                        <img src="{{ .RelPermalink }}" alt="avatars">
+                                    {{ end }}
+                                {{ end }}
                             </div>
                             <div class="testimonial__user-name-wrapper">
                                 <h3 class="testimonial__user-title">{{ .name }}</h3>

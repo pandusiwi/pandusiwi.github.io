@@ -63,7 +63,7 @@ collections:
                   - { label: "Nama", name: "name", widget: "string" }
                   - { label: "Role/Jabatan", name: "role", widget: "string" }
                   - { label: "Rating (1-5)", name: "star", widget: "number", min: 1, max: 5 }
-                  - { label: "ID Gambar (Opsional)", name: "imgID", widget: "number" }
+                  - { label: "Gambar", name: "image", widget: "image", public_folder: "images/" }
                   - { label: "Isi Testimoni", name: "testimony", widget: "text" }
   
   - name: "categories"

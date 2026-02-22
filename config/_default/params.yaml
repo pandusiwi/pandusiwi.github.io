@@ -34,19 +34,19 @@ testimonies:
     - name: Ratna Wijaya
       role: Dosen & Peneliti Budaya
       star: 5
-      imgID: 32
+      image: images/profil-32.jpg
       testimony: |
         Motif batiknya otentik dan kainnya sangat halus. Nyaman dipakai seharian bekerja tanpa rasa gerah. Penampilan saya jadi lebih elegan dan berwibawa. Sangat merepresentasikan warisan budaya yang berkualitas tinggi.
     - name: Hendra Gunawan
       role: Kontraktor Properti
       star: 3
-      imgID: 68
+      image: images/profil-68.jpg
       testimony: |
         Sebagai kontraktor, ketepatan waktu adalah kunci. Pandusiwi selalu mengirimkan material bangunan berkualitas premium tepat jadwal. Proyek renovasi saya berjalan lancar tanpa hambatan logistik. Partner terpercaya untuk konstruksi kokoh.
     - name: Sarah Amelia
       role: The Master Chef
       star: 5
-      imgID: 0
+      image: images/profil-0.jpg
       testimony: |
         Masakan kateringnya sungguh lezat dengan bumbu yang meresap sempurna. Porsinya pas dan kemasannya sangat higienis. Solusi paling praktis untuk acara kantor, semua tamu memuji rasanya. Pasti akan pesan lagi!
       
