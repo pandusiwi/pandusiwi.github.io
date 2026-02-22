@@ -1,52 +1,43 @@
 logo: images/pandusiwi-logo.png
-address: Jl. Lorem ipsum doloro sit ametis 
-contact: "+62 822 9855 4382"
-
-home: 
+address: Jl. Syekh Datul Kahfi No.285, Trusmi Kulon, Kec. Plered, Kabupaten Cirebon, Jawa Barat 45154, Indonesia
+contact: +62 822 9855 4382
+home:
   hero:
     title: Ragam Kebutuhan, </br> Satu Kualitas Terpecaya.
-    description: |
+    description: |-
       Menghadirkan koleksi Batik premium, kuliner beku praktis, 
       hingga solusi bahan bangunan yang kokoh untuk Anda.
     ctaLabel: Belanja Sekarang
-    ctaLink: /products
     images:
       - https://kelompokgwk.wordpress.com/wp-content/uploads/2017/08/batik-texture-background.jpg
       - images/batik.jpg
-
+    ctaLink: /products
   about:
     subtitle: pandusiwi
-    description: |
+    description: |-
       Nama **'Pandusiwi'** lahir dari semangat untuk mengabdi (Siwi) dan memandu (Pandu). Kami percaya bahwa bisnis bukan sekadar transaksi, melainkan amanah untuk memberikan yang terbaik.
 
       Hadir sebagai entitas multidimensi, Pandusiwi menyelaraskan keindahan budaya melalui Batik, kepraktisan pangan, hingga kekokohan material bangunan. Tiga pilar berbeda, satu standar yang sama: Integritas tanpa kompromi.
     image: https://cdn.vectorstock.com/i/500p/23/28/golden-floral-batik-pattern-vector-47472328.jpg
     buttonLabel: Baca Selengkap nya
     buttonLink: /about
-
   categories:
+    description: Temukan beragam kebutuhan yang telah kami sediakan.
     title: Kategori Kami
-    description: |
-      Temukan beragam kebutuhan yang telah kami sediakan.
-
 testimonies:
   main:
     - name: Ratna Wijaya
       role: Dosen & Peneliti Budaya
       star: 5
       imgID: 32
-      testimony: |
-        Motif batiknya otentik dan kainnya sangat halus. Nyaman dipakai seharian bekerja tanpa rasa gerah. Penampilan saya jadi lebih elegan dan berwibawa. Sangat merepresentasikan warisan budaya yang berkualitas tinggi.
+      testimony: Motif batiknya otentik dan kainnya sangat halus. Nyaman dipakai seharian bekerja tanpa rasa gerah. Penampilan saya jadi lebih elegan dan berwibawa. Sangat merepresentasikan warisan budaya yang berkualitas tinggi.
     - name: Hendra Gunawan
       role: Kontraktor Properti
       star: 3
       imgID: 68
-      testimony: |
-        Sebagai kontraktor, ketepatan waktu adalah kunci. Pandusiwi selalu mengirimkan material bangunan berkualitas premium tepat jadwal. Proyek renovasi saya berjalan lancar tanpa hambatan logistik. Partner terpercaya untuk konstruksi kokoh.
+      testimony: Sebagai kontraktor, ketepatan waktu adalah kunci. Pandusiwi selalu mengirimkan material bangunan berkualitas premium tepat jadwal. Proyek renovasi saya berjalan lancar tanpa hambatan logistik. Partner terpercaya untuk konstruksi kokoh.
     - name: Sarah Amelia
       role: The Master Chef
       star: 5
       imgID: 0
-      testimony: |
-        Masakan kateringnya sungguh lezat dengan bumbu yang meresap sempurna. Porsinya pas dan kemasannya sangat higienis. Solusi paling praktis untuk acara kantor, semua tamu memuji rasanya. Pasti akan pesan lagi!
-      
+      testimony: Masakan kateringnya sungguh lezat dengan bumbu yang meresap sempurna. Porsinya pas dan kemasannya sangat higienis. Solusi paling praktis untuk acara kantor, semua tamu memuji rasanya. Pasti akan pesan lagi!
