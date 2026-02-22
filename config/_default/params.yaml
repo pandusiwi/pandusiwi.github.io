@@ -22,22 +22,23 @@ home:
     buttonLabel: Baca Selengkapnya
     buttonLink: /about
   categories:
-    title: Kategori Kami
     description: Temukan beragam kebutuhan yang telah kami sediakan.
+    title: Kategori Kami
 testimonies:
   main:
     - name: Ratna Wijaya
       role: Dosen & Peneliti Budaya
       star: 5
-      imgID: 32
       testimony: Motif batiknya otentik dan kainnya sangat halus. Nyaman dipakai seharian bekerja tanpa rasa gerah. Penampilan saya jadi lebih elegan dan berwibawa. Sangat merepresentasikan warisan budaya yang berkualitas tinggi.
+      imgID: 32
     - name: Hendra Gunawan
       role: Kontraktor Properti
       star: 3
-      imgID: 68
+      image: /images/GwehArmed.jpg
       testimony: Sebagai kontraktor, ketepatan waktu adalah kunci. Pandusiwi selalu mengirimkan material bangunan berkualitas premium tepat jadwal. Proyek renovasi saya berjalan lancar tanpa hambatan logistik. Partner terpercaya untuk konstruksi kokoh.
+      imgID: 68
     - name: Sarah Amelia
       role: The Master Chef
       star: 5
-      imgID: 0
       testimony: Masakan kateringnya sungguh lezat dengan bumbu yang meresap sempurna. Porsinya pas dan kemasannya sangat higienis. Solusi paling praktis untuk acara kantor, semua tamu memuji rasanya. Pasti akan pesan lagi!
+      imgID: 0
