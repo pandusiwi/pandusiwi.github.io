@@ -22,7 +22,7 @@ buy_options:
 
 •> Batik Viscose Polos – Simpel, Elegan, dan Nyaman Dipakai Seharian.
 
-Batik Viscose Polos adalah pilihan tepat untuk kamu yang ingin tampil elegan dengan sentuhan klasik namun tetap nyaman. Terbuat dari bahan viscose berkualitas, kain ini memiliki tekstur halus, lembut, dan jatuh dengan indah saat dikenakan. 
+Batik Viscose Polos adalah pilihan tepat untuk kamu yang ingin tampil elegan dengan sentuhan klasik namun tetap nyaman. Terbuat dari bahan viscose berkualitas, kain ini memiliki tekstur halus, lembut, dan jatuh dengan indah saat dikenakan.
 
 •> Keunggulan Produk:
 
