@@ -4,7 +4,7 @@ title: Batik Katun Tulis Mega Mendung
 date: 2026-02-22T08:20:00+07:00
 draft: false
 info:
-  price: 300
+  price: 300000
   is_sold_out: false
 images:
   - image: images/1000051716.jpg
