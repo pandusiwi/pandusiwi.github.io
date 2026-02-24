@@ -4,8 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (images.length === 0) return;
 
     let currentIndex = 0;
-    const intervalTime = 5000;
 
+    // make the first one active
+    images[currentIndex].classList.add('active');
+
+    const intervalTime = 5000;
     const nextImage = () => {
         images[currentIndex].classList.remove('active');
 
