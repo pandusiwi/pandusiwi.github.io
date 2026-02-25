@@ -21,7 +21,7 @@ collections:
           - { label: "Logo", name: "logo", widget: "image" }
           - { label: "Alamat", name: "address", widget: "string" }
           - { label: "Kontak", name: "contact", widget: "string" }
-          
+
           # Bagian Hero
           - label: "Halaman Depan - Hero"
             name: "home"
@@ -87,7 +87,7 @@ collections:
         name: "weight"
         widget: "number"
         default: 10
-        hint: "Semakin kecil angkanya, semakin di depan posisinya (Contoh: 10, 20, 30)"     
+        hint: "Semakin kecil angkanya, semakin di depan posisinya (Contoh: 10, 20, 30)"
       - { label: "Deskripsi", name: "description", widget: "text" }
       - { name: "layout", widget: "hidden", default: "list" }
       - { label: "Body", name: "body", widget: "markdown", required: false }
@@ -98,7 +98,7 @@ collections:
     label: "Katalog {{.Title}}"
     folder: "content/products/{{.File.ContentBaseName}}"
     create: true
-    icon: inventory_2
+    icon: '{{ .Params.icon | default "inventory_2" }}'
 
     path: '{{ partial "sur" "slug" }}/index'
 
@@ -172,3 +172,22 @@ collections:
       # F. DESKRIPSI UTAMA
       - { label: "Deskripsi Lengkap", name: "body", widget: "markdown" }
   #{{- end }}
+
+singletons:
+  - name: about
+    label: Halaman About
+    file: content/about.md
+    icon: info
+    fields:
+      - { label: Title, name: title, widget: string }
+      - {
+          label: Tanggal,
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DDTHH:mm:ssZ",
+          date_format: "DD/MM/YYYY",
+          time_format: "HH:mm",
+          picker_utc: false,
+        }
+      - { name: layout, widget: hidden, default: about }
+      - { label: Isi About, name: body, widget: richtext }
