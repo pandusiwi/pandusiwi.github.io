@@ -4,7 +4,7 @@ title: Batik Paris 2K Celom
 date: 2026-02-25T08:24:00+07:00
 draft: false
 info:
-  price: 75
+  price: 70
   is_sold_out: false
 images:
   - image: images/1000053147.jpg
