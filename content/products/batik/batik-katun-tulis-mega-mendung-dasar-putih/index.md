@@ -4,7 +4,7 @@ title: Batik Katun Tulis Mega Mendung Dasar Putih
 date: 2026-02-24T08:24:00+07:00
 draft: false
 info:
-  price: 225
+  price: 225000
   is_sold_out: false
 images:
   - image: images/1000052818.jpg
