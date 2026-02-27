@@ -4,7 +4,7 @@ title: Batik Viscose 2K Celom
 date: 2026-02-27T07:58:00+07:00
 draft: false
 info:
-  price: 68
+  price: 68000
   is_sold_out: false
 images:
   - image: images/1000053492.jpg
