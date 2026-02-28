@@ -50,7 +50,7 @@ Harga ramah tapi kualitas tetap oke!
 
 ✔ Cocok untuk berbagai model busana.
 
-✔ Bisa dijadikan outfit couple / sarimbit 
+✔ Bisa dijadikan outfit couple / sarimbit
 
 ✔ Mudah dijahit & dibentuk.
 
