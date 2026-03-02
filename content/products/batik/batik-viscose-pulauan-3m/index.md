@@ -1,6 +1,6 @@
 ---
 category: batik
-title: Batik viscose Pulauan 3M
+title: Batik Viscose Pulauan 3M
 date: 2026-03-02T10:20:00+07:00
 draft: false
 info:
