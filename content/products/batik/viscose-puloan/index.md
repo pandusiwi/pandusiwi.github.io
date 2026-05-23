@@ -1,6 +1,6 @@
 ---
 category: batik
-title: viscose puloan
+title: Batik Viscose Puloan Sogan Bacem
 date: 2026-05-22T22:19:00+07:00
 draft: false
 info:
