@@ -1,6 +1,6 @@
 ---
 category: batik
-title: PARIS 1K HITAM PUTIH
+title: BATIK PARIS 1K HITAM PUTIH
 date: 2026-06-16T08:40:00+07:00
 draft: false
 info:
